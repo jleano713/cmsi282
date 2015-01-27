@@ -1,2 +1,2 @@
-# cmsi282
+# CMSI282
 LMU CMSI 282 Algorithms / Ray Toal
