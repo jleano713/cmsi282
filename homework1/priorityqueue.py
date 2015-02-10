@@ -28,9 +28,9 @@ class PriorityQueue:
 
     def sift_down(self, index):
         child = (index * 2) + 1
-        if child >= len(self.items):
+        if child >= len(self):
             return
-        if child + 1 < len(self.items) and self.items[child] > self.items[child + 1]:
+        if child + 1 < len(self) and self.items[child] > self.items[child + 1]:
             child += 1
         if self.items[index] > self.items[child]:
             self.items[child], self.items[index] = self.items[index], self.items[child]
@@ -38,7 +38,7 @@ class PriorityQueue:
 
     def add(self, item):
         self.items.append(item)
-        self.sift_up(len(self.items) - 1)
+        self.sift_up(len(self) - 1)
 
     def remove(self):
         if self.is_empty():
