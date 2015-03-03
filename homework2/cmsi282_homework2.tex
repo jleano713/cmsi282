@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage[margin=1.0in]{geometry}
+
+\title{CMSI 282 - Homework 2}
+\author{Janine Leano}
+\date{March 1st 2015}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+	\item 
+		(a.) f = $\Theta$(g) \\
+		(b.) f = O(g) \\
+		(c.) f = $\Theta$(g) \\
+		(d.) f = $\Theta$(g) \\
+		(e.) f = $\Theta$(g) \\
+		(f.) f = $\Theta$(g) \\
+		(g.) f = $\Omega$(g) \\
+		(h.) f = $\Omega$(g) \\
+		(i.) f = $\Omega$(g) \\
+		(j.) f = $\Omega$(g) \\
+		(k.) f = $\Omega$(g) \\
+		(l.) f = O(g) \\
+		(m.) f = O(g) \\
+		(n.) f = $\Theta$(g) \\
+		(o.) f = $\Omega$(g) \\
+		(p.) f = O(g) \\
+		(q.) f = $\Theta$(g)
+	\item
+		(a.) \[
+		\begin{bmatrix}
+    			x_{11}       & x_{12} \\
+    			x_{21}       & x_{22}  
+		\end{bmatrix}
+		\begin{bmatrix}
+    			x_{11}       & x_{12} \\
+    			x_{21}       & x_{22}  
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+    		x_{11} \times x_{11} + x_{12} \times x_{21} & x_{11} \times x_{12} + x_{12} \times x_{22}  \\
+    		x_{21} \times x_{11} + x_{22} \times x_{21} & x_{21} \times x_{12} + x_{22} \times x_{22}
+		\end{bmatrix}
+		\] \\
+		(b.) In order to get $X^{8}$, \\
+		Start with $X^{2} = X^{2} \times X^{2} \\
+		 X^{4} =  X^{2} \times  X^{2}  \\
+		 X^{8} = X^{4} \times X^{4}$ \\
+		 n is an exponential of 2 \\
+		 In the general case $X^{n}$ where $n = 2^{k}$, at every iteration, n is doubled from before. The running time is O($\log(n)$) since it takes $k = \log_2(n)$ matrix multiplications in order to compute $X^{n}$.
+		 
+	\item
+		N = number given \\
+		d = number of digits in N \\
+		In decimal: $10^{d - 1} = N \\
+		d1 = \log_{10}(N) + 1$\\
+		In binary: $d2 = \log_{2}(N) + 1\\
+		\log_{2}(N) = \frac{\log_{10}(N)}{\log_{10}(2)} \leq 4$
+	
+	\item
+		Upper bound: \\
+		$n! = 1 \times 2 \times 3 \times \dots n \\
+		n^{n} = n \times n \times n \times \dots n $\\
+		with both of equal n lengths. $n! < n^{n}$ \\
+		So $n! = O(n^{n})$ \\
+		Lower bound: \\
+		$n! = 1 \times 2 \times 3 \times \dots n \\
+		(\frac{n}{2})^{\frac{n}{2}} = $ \\
+		with both of equal n lengths. $n! > (\frac{n}{2})^{\frac{n}{2}} \\
+		\log(n!) > \log(\frac{n}{2})^{\frac{n}{2}} \\
+		\log(n!) > \frac{1}{2} \times n \times \log(\frac{1}{2} \times n) \\
+		\frac{1}{2}s$ are constants so \\
+		$\log(n!) > n\log(n)$ \\ \\
+		Therefore, $\log(n!) = \Theta(n\log(n))$
+		
+	\item
+		$4^{1536} \equiv 9^{4824}\mod(35)$, so yes
+		
+	\item
+		According to Fermat's Theorem: \\
+		$5^{30000}\equiv 1 \mod(31) \equiv 125 \mod(31) \equiv 6^{123456}$, so yes
+		
+	\item
+		Given $b = 15$. Repeated squaring yields $2^{15} = 2^{8} \times 2^{4} \times 2^{2} \times 2^{1}$ (4 multiplications)\\
+		Repeated $x^{5}$-ing yields $2^{15} = 2^{5} \times 2^{5} \times 2^{5}$ (3 multiplications)
+		
+	\item
+		Using modular exponentiation, $2^{125}\mod(127) = 64$
+		
+	\item
+		\lstinputlisting[language=Python]{cmsi282_homework2_question9.py}
+		Running time is polynomial.
+		
+	\item
+		\ We can't immediately base a primality test using Wilson's theorem because it is not efficient. It is harder to evaluate the larger the input. (source: Wikipedia article on Wilson's theorem)
+		
+	\item
+		\lstinputlisting[language=Python]{cmsi282_homework2_question11.py}
+	
+
+\end{enumerate}
+
+\end{document}
