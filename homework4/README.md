@@ -1,5 +1,5 @@
 #CMSI282: Homework 4
-## Authors: Brian Ku, Janine Leano, Justin Sanny 
+## Authors: Bryan Ku, Janine Leano, Justin Sanny 
 
 ###Problems
 1.) 4.2
@@ -74,9 +74,10 @@ def sum_of_subset(lst,target):
 
 6.)
 ```Java
-CURRENTLY UNFINISHED
+/** CURRENTLY UNFINISHED
 ORIGINAL AUTHOR/ALL THE CREDIT GOES TO: KELLY SUTTON
 https://code.google.com/p/ksutton/source/browse/trunk/cmsi282/hw4/edu/lmu/cs/ksutton/hw4/?r=349
+*/
 package algorithms.homework4;
 
 import java.util.ArrayList;
