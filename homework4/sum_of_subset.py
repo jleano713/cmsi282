@@ -14,5 +14,7 @@ def sum_of_subset(lst,target):
                 subset[i][j] = subset[i][j] or subset[i-lst[j-1]][j-1]
     return subset[target-1][length-1]
 
-list = [1, 3, 2, 4, -2, 1]
-print(str(list, 2)))
+list = [1, 3, 2, 4, -2, 1, 7]
+print(sum_of_subset(list, 12))
+print(sum_of_subset(list, 100))
+print(sum_of_subset(list, -1))
